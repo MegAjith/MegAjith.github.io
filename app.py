@@ -15,7 +15,7 @@ from keras.models import model_from_json
 
 with open('/Users/megha/Projects/model_architecture.json', 'r') as json_file:
     model = model_from_json(json_file.read())
-#model = model_from_json('model_architecture.json') 
+
 model.load_weights('model_weights.h5')
 model.compile(optimizer= 'adam', loss= 'binary_crossentropy', metrics=['accuracy'])
 
